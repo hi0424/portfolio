@@ -12,13 +12,13 @@ export default function Home() {
 
   return (
     <main className="relative h-screen w-screen overflow-hidden">
-      {/* Clouds: shows about-hero.png for About, clouds.png for others */}
-      <CloudsBackground isHero={active === "About"} />
+      {/* Clouds always visible */}
+      <CloudsBackground />
 
-      {/* Navbar always visible */}
+      {/* Navbar */}
       <Navbar active={active} setActive={setActive} />
 
-      {/* ABOUT — only exists on About */}
+      {/* ABOUT — mounted ONLY on About */}
       {active === "About" && (
         <div className="absolute inset-0 z-20">
           <AboutSection />
@@ -34,16 +34,12 @@ export default function Home() {
 
       {/* TECH STACK */}
       {active === "Tech Stack" && (
-        <div className="absolute inset-0 z-10">
-          {/* TechStackSection */}
-        </div>
+        <div className="absolute inset-0 z-10" />
       )}
 
       {/* CONTACT */}
       {active === "Contact" && (
-        <div className="absolute inset-0 z-10">
-          {/* ContactSection */}
-        </div>
+        <div className="absolute inset-0 z-10" />
       )}
     </main>
   );

@@ -1,15 +1,9 @@
-type Props = {
-  isHero?: boolean;
-};
-
-export default function CloudsBackground({ isHero = false }: Props) {
+export default function CloudsBackground() {
   return (
     <div
-      className="fixed inset-0 -z-10"
+      className="fixed inset-0 -z-20"
       style={{
-        backgroundImage: isHero
-          ? "url('/about-hero.png')"
-          : "url('/clouds.png')",
+        backgroundImage: "url('/clouds.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
